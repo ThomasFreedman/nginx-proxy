@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <username>"
+  echo " Adds <username> and password to list of authorized users."
+  echo " Prompts for password and verifies it with 2nd prompt."
+  echo " Requires openssl."
+else
+  echo -n "$1:" >> /etc/nginx/www-pw
+  openssl passwd -apr1 >> /etc/nginx/www-pw
+fi
