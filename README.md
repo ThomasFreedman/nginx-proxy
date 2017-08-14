@@ -3,6 +3,7 @@
 This repo holds configuration files and scripts for an Nginx web server to proxy websocket requests.
 
 Files:
+
 add-auth -- script to add passwords to basic authentication file
 load_balancer.conf -- config file for non-SSL websocket load balancing proxy
 nginx.conf -- global Nginx server config with ws zone definition
